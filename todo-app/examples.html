@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Usage Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #764ba2;
+            padding-left: 15px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .example {
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .feature-item p {
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+            font-size: 0.95em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .feature {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to App</a>
+        
+        <h1>📚 To-Do List Usage Examples</h1>
+
+        <h2>Getting Started</h2>
+        <p>Open the <strong>index.html</strong> file in your web browser to start using the To-Do List application. No installation or setup required!</p>
+
+        <h2>Basic Operations</h2>
+
+        <h3>1️⃣ Adding Your First Task</h3>
+        <div class="example">
+            <p><strong>Step 1:</strong> Type your task in the input field at the top</p>
+            <p><strong>Step 2:</strong> Click the "Add Task" button or press Enter</p>
+            <p><strong>Result:</strong> Your task appears in the list with a timestamp</p>
+        </div>
+
+        <h3>2️⃣ Completing a Task</h3>
+        <div class="example">
+            <p><strong>Method 1:</strong> Click the checkbox next to a task</p>
+            <p><strong>Visual Change:</strong> Completed tasks show strikethrough text and appear faded</p>
+            <p><strong>Statistics Update:</strong> The "Completed" counter increases</p>
+        </div>
+
+        <h3>3️⃣ Editing Tasks</h3>
+        <div class="example">
+            <p><strong>Step 1:</strong> Click the "Edit" button on the task</p>
+            <p><strong>Step 2:</strong> A dialog box appears with the current task text</p>
+            <p><strong>Step 3:</strong> Modify the text and click OK</p>
+            <p><strong>Result:</strong> Task is updated instantly and saved</p>
+        </div>
+
+        <h3>4️⃣ Deleting Tasks</h3>
+        <div class="example">
+            <p><strong>Step 1:</strong> Click the "Delete" button on the task</p>
+            <p><strong>Step 2:</strong> Confirm the deletion in the dialog box</p>
+            <p><strong>Result:</strong> Task is removed from the list</p>
+        </div>
+
+        <h2>Filtering and Organization</h2>
+
+        <h3>Filter by Status</h3>
+        <div class="feature">
+            <div class="feature-item">
+                <h3>👀 All Tasks</h3>
+                <p>View every task in your list, both completed and active</p>
+            </div>
+            <div class="feature-item">
+                <h3>⏳ Active Tasks</h3>
+                <p>See only tasks that still need to be completed</p>
+            </div>
+            <div class="feature-item">
+                <h3>✅ Completed Tasks</h3>
+                <p>View only tasks you've already finished</p>
+            </div>
+            <div class="feature-item">
+                <h3>🧹 Clear Completed</h3>
+                <p>Remove all completed tasks at once</p>
+            </div>
+        </div>
+
+        <h2>Statistics Dashboard</h2>
+        <div class="example">
+            <p><strong>Total Tasks:</strong> Shows the total number of tasks in your list</p>
+            <p><strong>Completed:</strong> Shows how many tasks you've finished (green)</p>
+            <p><strong>Remaining:</strong> Shows how many tasks are still pending (orange)</p>
+            <p><em>These stats update automatically as you add, complete, or delete tasks</em></p>
+        </div>
+
+        <h2>Advanced Features</h2>
+
+        <h3>Local Storage & Data Persistence</h3>
+        <div class="example">
+            <p><strong>What is it?</strong> Your tasks are saved in your browser's local storage</p>
+            <p><strong>How it works:</strong> Every change is automatically saved</p>
+            <p><strong>Persistence:</strong> Tasks remain even after closing and reopening the browser</p>
+            <p><strong>Privacy:</strong> All data stays on your device - never sent to any server</p>
+        </div>
+
+        <h3>Export Tasks (Developer Console)</h3>
+        <div class="example">
+            <p>To export your tasks as a JSON file:</p>
+            <pre>app.exportTasks()</pre>
+            <p>This downloads your tasks with a timestamp filename for backup</p>
+        </div>
+
+        <h3>Import Tasks (Developer Console)</h3>
+        <div class="example">
+            <p>To import previously exported tasks:</p>
+            <pre>app.importTasks(jsonString)</pre>
+            <p>Replace <code>jsonString</code> with your JSON data</p>
+        </div>
+
+        <h2>Keyboard Shortcuts</h2>
+        <div class="example">
+            <p><strong>Enter Key:</strong> While in the input field, press Enter to quickly add a task</p>
+            <p><strong>Tab Navigation:</strong> Use Tab to navigate through buttons</p>
+            <p><strong>Checkbox:</strong> Space to toggle checkbox after tabbing to it</p>
+        </div>
+
+        <h2>Use Cases & Scenarios</h2>
+
+        <h3>📅 Daily Task Management</h3>
+        <div class="example">
+            <p>Keep track of your daily to-do items. The app displays the current date and task creation time, helping you organize by day.</p>
+        </div>
+
+        <h3>🎯 Project Planning</h3>
+        <div class="example">
+            <p>Break down large projects into smaller tasks. Use the active filter to focus on pending work.</p>
+        </div>
+
+        <h3>✔️ Progress Tracking</h3>
+        <div class="example">
+            <p>Monitor your productivity with real-time statistics showing how many tasks you've completed.</p>
+        </div>
+
+        <h3>🛒 Shopping Lists</h3>
+        <div class="example">
+            <p>Use the app as a shopping list. Check items as you shop and clear completed items when done.</p>
+        </div>
+
+        <h3>📝 Note Taking</h3>
+        <div class="example">
+            <p>Save quick notes or reminders. The timestamps help you track when you added each note.</p>
+        </div>
+
+        <h2>Tips & Tricks</h2>
+
+        <div class="feature">
+            <div class="feature-item">
+                <h3>⚡ Quick Add</h3>
+                <p>Use Enter key instead of clicking for faster task entry</p>
+            </div>
+            <div class="feature-item">
+                <h3>🎨 Filter Focus</h3>
+                <p>Filter by Active tasks to focus on what needs to be done</p>
+            </div>
+            <div class="feature-item">
+                <h3>📊 Track Progress</h3>
+                <p>Watch the "Remaining" count decrease as you complete tasks</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔄 Batch Operations</h3>
+                <p>Use "Clear Completed" to quickly clean up finished items</p>
+            </div>
+        </div>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Tasks Not Saving?</h3>
+        <div class="example">
+            <p><strong>Solution 1:</strong> Check if your browser allows localStorage</p>
+            <p><strong>Solution 2:</strong> Try disabling browser extensions that block storage</p>
+            <p><strong>Solution 3:</strong> Clear browser cache and reload the page</p>
+        </div>
+
+        <h3>Page Displays But No Tasks Show?</h3>
+        <div class="example">
+            <p><strong>Check:</strong> Make sure JavaScript is enabled in your browser</p>
+            <p><strong>Check Browser Console:</strong> Press F12 to see if there are any error messages</p>
+        </div>
+
+        <h3>Can't Find Exported Tasks?</h3>
+        <div class="example">
+            <p><strong>Location:</strong> Check your browser's default Downloads folder</p>
+            <p><strong>Filename:</strong> Look for a file named <code>tasks_[timestamp].json</code></p>
+        </div>
+
+        <h2>System Requirements</h2>
+        <div class="example">
+            <p><strong>Browser:</strong> Any modern web browser (Chrome, Firefox, Safari, Edge)</p>
+            <p><strong>Storage:</strong> Minimal - uses browser's localStorage (typically 5-10MB available)</p>
+            <p><strong>Internet:</strong> Not required - fully offline capable</p>
+            <p><strong>Memory:</strong> Works smoothly with 100+ tasks</p>
+        </div>
+
+        <h2>Getting Help</h2>
+        <div class="example">
+            <p><strong>View Source Code:</strong> All code is plain JavaScript - inspect the app.js file</p>
+            <p><strong>Browser Console:</strong> Open Developer Tools (F12) to debug issues</p>
+            <p><strong>Check GitHub:</strong> Visit the repository for latest updates</p>
+        </div>
+    </div>
+</body>
+</html>
